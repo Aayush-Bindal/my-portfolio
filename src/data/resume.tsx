@@ -247,9 +247,73 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "HackSpire",
+      dates: "April 2025",
+      location: "",
+      description:
+        "Developed a web application with AI model integration as part of a 4-person team at the HackSpire hackathon. The project was built overnight and recognized as one of the top projects at the event.",
+      image:
+        "/Hackspire.webp",
+      links: [
+        {
+          title: "",
+          icon: <Icons.globe className="size-3" />,
+          href: "https://www.hackspire.in/",
+        },
+      ],
+    },
+    {
+      title: "HackOwasp 7.0",
+      dates: "April 2025",
+      location: "",
+      description:
+        "At HackOWASP, I collaborated within a team of five to develop an anonymous product/service review website leveraging blockchain technology. This web3 application aimed to combat fake reviews by ensuring anonymity and data integrity. My contributions included learning and implementing Motoko for smart contract development and integrating sentiment analysis to provide insightful review summaries. This experience provided valuable insights into blockchain development and AI-driven content analysis within a decentralized environment.",
+      image:
+        "/lego.png",
+      links: [
+        {
+          title: "",
+          icon: <Icons.globe className="size-3" />,
+          href: "https://hack.owasptiet.com/",
+        },
+      ],
+    },
+    {
+      title: "Robothon",
+      dates: "February 2025",
+      location: "",
+      description:
+        "At Robothon, my first robotics hackathon, our team built a small robot designed to navigate fire scenarios and assist firefighters. This project marked my first experience using Arduino and various sensors in a hackathon setting. The robot was engineered to autonomously navigate a simulated fire environment, demonstrating a practical application of robotics to aid in emergency response. This experience provided valuable hands-on learning in embedded systems, sensor integration, and robotic design.",
+      image:
+        "/Robothon.jpeg",
+      links: [
+        {
+          title: "",
+          icon: null,
+          href: "",
+        },
+      ],
+    },
+    {
+      title: "SatHack",
+      dates: "November 2024",
+      location: "",
+      description:
+        "At Sathack, my first hackathon, I developed a web application designed as a support platform for incoming college students. The core feature was a chatbot capable of answering frequently asked questions about various aspects of college life, including class locations, subjects, societies, and professors. This project marked my initial foray into hackathons, providing a practical application of web development skills to address a common challenge faced by new students, enhancing their onboarding experience.",
+      image:
+        "/sat.jpeg",
+      links: [
+        {
+          title: "",
+          icon: null,
+          href: "",
+        },
+      ],
+    },
+    {
       title: "SynergySpark",
       dates: "August 2024",
-      location: "Thapar institute of engineering and technology",
+      location: "",
       description:
         "Participated in first competitive ideathon focused on brand innovation and product development. Collaborated with team to merge two distinct brands and conceptualize an entirely new product offering. Gained experience in creative problem-solving, rapid ideation, market analysis, and presentation skills under time constraints.",
       image:
