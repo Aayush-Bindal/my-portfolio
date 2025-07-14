@@ -15,13 +15,17 @@ export const DATA = {
   skills: [
     "React",
     "Python",
-    "Flask",
-    "Postgres",
-    "Docker",
-    "Git",
     "JavaScript",
+    "Flask",
+    "FastAPI",
+    "PostgreSQL",
+    "Node.js",
+    "Docker",
+    "Firebase",
+    "Git",
+    "TailwindCSS",
     "C++",
-    "C",
+    "C"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
