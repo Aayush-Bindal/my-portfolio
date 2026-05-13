@@ -1,3 +1,5 @@
+"use client";
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -5,17 +7,19 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { SpiralLoader } from "@/components/ui/spiral-loader";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import { useState } from "react";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+function PortfolioContent() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="mx-auto w-full max-w-screen-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
@@ -232,5 +236,16 @@ export default function Page() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function Page() {
+  const [entered, setEntered] = useState(false);
+
+  return (
+    <>
+      {!entered ? <SpiralLoader onEnter={() => setEntered(true)} /> : null}
+      <PortfolioContent />
+    </>
   );
 }
