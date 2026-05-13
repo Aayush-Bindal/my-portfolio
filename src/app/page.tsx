@@ -5,10 +5,10 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { FluidParticlesBackground } from "@/components/ui/fluid-particles-background";
 import { SpiralLoader } from "@/components/ui/spiral-loader";
+import { SplineScene } from "@/components/ui/splite";
 import { TextScramble } from "@/components/ui/text-scramble";
 import { Typewriter } from "@/components/ui/typewriter";
 import { DATA } from "@/data/resume";
@@ -66,10 +66,12 @@ function PortfolioContent({ entered }: { entered: boolean }) {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <div className="h-44 w-44 overflow-hidden bg-transparent sm:h-56 sm:w-56">
+                <SplineScene
+                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                  className="h-full w-full"
+                />
+              </div>
             </BlurFade>
           </div>
         </div>
