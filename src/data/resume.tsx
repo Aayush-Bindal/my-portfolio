@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, FileDown } from "lucide-react";
 
 export const DATA = {
   name: "Aayush Bindal",
@@ -41,6 +41,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/RESUME.pdf", icon: FileDown, label: "Resume" },
   ],
   contact: {
     email: "aayushbindal01@gmail.com",
@@ -135,53 +136,6 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "NutriAI – AI Nutrition Tracker",
-      href: "https://github.com/Aayush-Bindal/NutriAI",
-      dates: "Feb 2026 - April 2026",
-      active: true,
-      description:
-        "Shipped cross-platform nutrition tracker supporting natural language meal logging. Implemented LLM-powered parsing pipeline with automatic fallback reducing meal logging time by 85%. Designed animated calorie rings and architected a fully local data layer with secure API storage.",
-      technologies: [
-        "React Native",
-        "Expo",
-        "Gemini API",
-        "JavaScript"
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Aayush-Bindal/NutriAI",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/NutriAI.jpg",
-      video: "",
-    },
-    {
-      title: "MalariaNet",
-      href: "https://github.com/Aayush-Bindal/Malaria-Detection",
-      dates: "2026",
-      active: true,
-      description:
-        "End-to-end deep learning project classifying red blood cell microscopy images as Parasitized or Uninfected. Uses a fine-tuned MobileNetV2 CNN achieving ~95% accuracy. Features a production-ready FastAPI backend with Grad-CAM visual explanations.",
-      technologies: [
-        "PyTorch",
-        "FastAPI",
-        "Python",
-        "MobileNetV2",
-        "Grad-CAM"
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Aayush-Bindal/Malaria-Detection",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/malaria.png",
-      video: "",
-    },
-    {
       title: "Atlas – AI Digital Memory Scrapbook",
       href: "https://github.com/Aayush-Bindal/atlas",
       dates: "Nov 2025",
@@ -205,31 +159,82 @@ export const DATA = {
       video: "/atlas.mp4",
     },
     {
-      title: "EchoVault",
-      href: "https://github.com/Aayush-Bindal/EchoVault",
-      dates: "Apr 2025",
+      title: "SimONOE – ONOE Impact Simulator",
+      href: "https://sim-onoe.vercel.app/",
+      dates: "January 2026",
       active: true,
       description:
-        "EchoVault is a futuristic voice-based journaling web app.Instead of writing manually, you simply talk — like you're chatting with a friend.Our AI analyzes your emotions, detects your mood, and auto-generates journal entries capturing your real feelings.",
+        "Built the Bharat Governance Simulator to provide real-time impact analysis for the One Nation One Election (ONOE) initiative. It leverages HLC and Law Commission parameters to generate simulation dashboards, analyze mid-term risks, and run Monte Carlo simulations for governance impact.",
       technologies: [
-        "Python",
-        "Django",
-        "ReactJs",
-        "NextJS",
-        "Hugging Face Sentiment Models",
-        "Speech to Text (whisper)",
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS"
       ],
       links: [
         {
           type: "Website",
-          href: "https://github.com/Aayush-Bindal/EchoVault",
+          href: "https://sim-onoe.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/SimONOE",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
-      image: "/EchoVault.png",
-      video:
-        "",
+      image: "/simonoe.png",
+      video: "",
     },
+    {
+      title: "NutriAI – AI Nutrition Tracker",
+      href: "https://github.com/Aayush-Bindal/NutriAI",
+      dates: "Feb 2026 - April 2026",
+      active: true,
+      description:
+        "Shipped cross-platform nutrition tracker supporting natural language meal logging. Implemented LLM-powered parsing pipeline with automatic fallback reducing meal logging time by 85%. Designed animated calorie rings and architected a fully local data layer with secure API storage.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "Gemini API",
+        "JavaScript"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/NutriAI",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/NutriAI.jpg",
+      video: "",
+    },
+    // {
+    //   title: "EchoVault",
+    //   href: "https://github.com/Aayush-Bindal/EchoVault",
+    //   dates: "Apr 2025",
+    //   active: true,
+    //   description:
+    //     "EchoVault is a futuristic voice-based journaling web app.Instead of writing manually, you simply talk — like you're chatting with a friend.Our AI analyzes your emotions, detects your mood, and auto-generates journal entries capturing your real feelings.",
+    //   technologies: [
+    //     "Python",
+    //     "Django",
+    //     "ReactJs",
+    //     "NextJS",
+    //     "Hugging Face Sentiment Models",
+    //     "Speech to Text (whisper)",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://github.com/Aayush-Bindal/EchoVault",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/EchoVault.png",
+    //   video:
+    //     "",
+    // },
     {
       title: "TimeTable (Contribution)",
       href: "https://github.com/Aayush-Bindal/TimeTable",
@@ -246,7 +251,7 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://github.com/Aayush-Bindal/TimeTable",
           icon: <Icons.globe className="size-3" />,
         },
@@ -255,32 +260,30 @@ export const DATA = {
       video:
         "/video.mp4",
     },
-    //     {
-    //   title: "CampusMarketplace",
-    //   href: "https://github.com/Aayush-Bindal/CampusMarketplace",
-    //   dates: "Working",
-    //   active: true,
-    //   description:
-    //       "A classified marketplace specifically designed for college students. Buy and sell used items like lab coats, calculators, notes, and more within your college. Freshers can browse and buy, while only verified students with a @college.edu email can post items for sale.At night, the app transforms into a Night Market where students can buy and sell items within their hostels.",
-    //   technologies: [
-    //     "ReactJs",
-    //     "Python",
-    //     "Flask",
-    //     "PostGreSQL",
-    //     "Tailwind",
-    //     "FireBase",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://github.com/Aayush-Bindal/CampusMarketplace",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/CampusMarketplace.png",
-    //   video:
-    //     "",
-    // },
+    {
+      title: "MalariaNet",
+      href: "https://github.com/Aayush-Bindal/Malaria-Detection",
+      dates: "April 2026",
+      active: true,
+      description:
+        "End-to-end deep learning project classifying red blood cell microscopy images as Parasitized or Uninfected. Uses a fine-tuned MobileNetV2 CNN achieving ~95% accuracy. Features a production-ready FastAPI backend with Grad-CAM visual explanations.",
+      technologies: [
+        "PyTorch",
+        "FastAPI",
+        "Python",
+        "MobileNetV2",
+        "Grad-CAM"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/Malaria-Detection",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/malaria.png",
+      video: "",
+    },
         {
       title: "CS50 Finance",
       href: "https://github.com/Aayush-Bindal/CS50-finance",
@@ -297,7 +300,7 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "Source",
           href: "https://github.com/Aayush-Bindal/CS50-finance",
           icon: <Icons.globe className="size-3" />,
         },
