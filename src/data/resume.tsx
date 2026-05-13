@@ -8,30 +8,42 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "a full stack web developer and currently exploring AI/ML. Passionate about solving real-world problems and contributing to open-source.",
+    "a full stack developer and AI/ML enthusiast. Passionate about solving real-world problems and contributing to open-source.",
   summary:
-    "I'm a full stack web developer and a first-year Computer Engineering student at Thapar University. I build web applications using technologies like React, Flask, and PostgreSQL, and I'm comfortable working with tools like Git and Docker. Currently, I'm diving into the world of Artificial Intelligence and Machine Learning to expand my problem-solving capabilities beyond the web. I'm passionate about open-source and believe in learning by building. Whether it's a practical project, a hackathon idea, or contributing to the community, I love working on things that have real-world impact.",
+    "I'm a full stack developer and a Computer Engineering student at Thapar University. I specialize in building scalable web and mobile applications using modern technologies like React, Next.js, and Node.js. Recently, I've been deeply exploring Artificial Intelligence and Deep Learning, working with PyTorch and LLMs. I'm passionate about open-source, building real-world tools, and participating in hackathons. Whether it's a deep learning pipeline, a cross-platform mobile app, or a high-traffic web utility, I love building things that make an impact.",
   avatarUrl: "/me.png",
   skills: [
-    "React",
     "Python",
     "JavaScript",
-    "Flask",
-    "FastAPI",
-    "PostgreSQL",
-    "Node.js",
-    "Docker",
-    "Firebase",
-    "Git",
-    "TailwindCSS",
+    "TypeScript",
     "C++",
-    "C"
+    "C",
+    "React",
+    "Next.js",
+    "React Native",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "Flask",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "PyTorch",
+    "NumPy",
+    "Pandas",
+    "Scikit-learn",
+    "OpenCV",
+    "Docker",
+    "Git",
+    "AWS",
+    "GCP"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
   ],
   contact: {
-    email: "abindal1_be24@thapar.edu",
+    email: "aayushbindal01@gmail.com",
     tel: "",
     social: {
       GitHub: {
@@ -67,62 +79,38 @@ export const DATA = {
 
   work: [
     {
-      company: "Team Oorja",
+      company: "Team Oorja (GKDC)",
       href: "https://www.linkedin.com/company/team-oorja/posts/?feedView=all",
       badges: [],
-      location: "Remote",
-      title: "DAQ Engineer",
+      location: "Patiala, India",
+      title: "DAQ Department Engineer",
       logoUrl: "/team_oorja_logo.jpg",
       start: "Nov 2024",
-      end: "Today",
+      end: "Present",
       description:
-        "Learnt basics of arudino and sensors. Implemented some sensors using esp32 in a gokart",
+        "Engineered multi-layer PCBs for sensor signal conditioning and automotive-grade noise reduction. Developed digital twin and data acquisition system using Simulink and C++ monitoring 10+ parameters at 100Hz. Integrated Python telemetry dashboard with LoRa RF pipeline reducing latency by 35% enabling sub-10ms performance updates.",
     },
     {
-      company: "Enactus",
+      company: "Enactus Thapar",
       href: "https://www.linkedin.com/company/enactus-tiet/posts/?feedView=all",
       badges: [],
-      location: "Remote",
-      title: "Executive Member",
+      location: "Patiala, India",
+      title: "Head of Research & Development",
       logoUrl: "/enactus.png",
-      start: "Oct 2024",
-      end: "Today",
+      start: "Sept 2024",
+      end: "Present",
       description:
-        "",
-    },
-    {
-      company: "Owasp",
-      href: "https://www.linkedin.com/company/owasp-tiet/posts/?feedView=all",
-      badges: [],
-      location: "Remote",
-      title: "Executive Member",
-      logoUrl: "/owasp.jpg",
-      start: "Oct 2024",
-      end: "Today",
-      description:
-        "",
-    },
-    {
-      company: "ACM",
-      href: "https://www.linkedin.com/company/thapar-acm-student-chapter/posts/?feedView=all",
-      badges: [],
-      location: "Remote",
-      title: "Member",
-      logoUrl: "/acm.jpg",
-      start: "Nov 2024",
-      end: "Today",
-      description:
-        "",
+        "Built and deployed the organization's official web presence using React.js and SEO, improving digital traffic by 40%. Leading R&D for Project Aarohan converting PET bottle waste into high-quality 3D printer filament achieving 95% prototype diameter consistency.",
     },
     {
       company: "GSsoc",
       href: "https://www.linkedin.com/company/girlscriptsoc/posts/?feedView=all",
       badges: [],
       location: "Remote",
-      title: "Contributor",
+      title: "Contributor & Campus Ambassador",
       logoUrl: "/girlscriptsoc_logo.jpg",
       start: "Oct 2024",
-      end: "Dec 2024",
+      end: "Dec 2025",
       description:
         "",
     },
@@ -131,7 +119,7 @@ export const DATA = {
     {
       school: "Thapar Institute of Engineering and Technology",
       href: "https://www.thapar.edu/",
-      degree: "BE, Computer Engineering",
+      degree: "BE, Computer Engineering (CGPA: 8.88/10)",
       logoUrl: "/Tiet.png",
       start: "2024",
       end: "2028",
@@ -146,6 +134,76 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "NutriAI – AI Nutrition Tracker",
+      href: "https://github.com/Aayush-Bindal/NutriAI",
+      dates: "Feb 2026 - April 2026",
+      active: true,
+      description:
+        "Shipped cross-platform nutrition tracker supporting natural language meal logging. Implemented LLM-powered parsing pipeline with automatic fallback reducing meal logging time by 85%. Designed animated calorie rings and architected a fully local data layer with secure API storage.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "Gemini API",
+        "JavaScript"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/NutriAI",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/NutriAI.jpg",
+      video: "",
+    },
+    {
+      title: "MalariaNet",
+      href: "https://github.com/Aayush-Bindal/Malaria-Detection",
+      dates: "2026",
+      active: true,
+      description:
+        "End-to-end deep learning project classifying red blood cell microscopy images as Parasitized or Uninfected. Uses a fine-tuned MobileNetV2 CNN achieving ~95% accuracy. Features a production-ready FastAPI backend with Grad-CAM visual explanations.",
+      technologies: [
+        "PyTorch",
+        "FastAPI",
+        "Python",
+        "MobileNetV2",
+        "Grad-CAM"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/Malaria-Detection",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/malaria.png",
+      video: "",
+    },
+    {
+      title: "Atlas – AI Digital Memory Scrapbook",
+      href: "https://github.com/Aayush-Bindal/atlas",
+      dates: "Nov 2025",
+      active: true,
+      description:
+        "Hackathon-winning web application transforming image collections into narrated digital diaries. Implemented client-side canvas image compression achieving 80% smaller payload sizes, and optimized prompt engineering reducing token usage by 25%.",
+      technologies: [
+        "Next.js",
+        "Context RAG",
+        "OpenRouter",
+        "TypeScript"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "atlas-bios.vercel.app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/atlas.mp4",
+    },
     {
       title: "EchoVault",
       href: "https://github.com/Aayush-Bindal/EchoVault",
@@ -197,32 +255,32 @@ export const DATA = {
       video:
         "/video.mp4",
     },
-        {
-      title: "CampusMarketplace",
-      href: "https://github.com/Aayush-Bindal/CampusMarketplace",
-      dates: "Working",
-      active: true,
-      description:
-          "A classified marketplace specifically designed for college students. Buy and sell used items like lab coats, calculators, notes, and more within your college. Freshers can browse and buy, while only verified students with a @college.edu email can post items for sale.At night, the app transforms into a Night Market where students can buy and sell items within their hostels.",
-      technologies: [
-        "ReactJs",
-        "Python",
-        "Flask",
-        "PostGreSQL",
-        "Tailwind",
-        "FireBase",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://github.com/Aayush-Bindal/CampusMarketplace",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/CampusMarketplace.png",
-      video:
-        "",
-    },
+    //     {
+    //   title: "CampusMarketplace",
+    //   href: "https://github.com/Aayush-Bindal/CampusMarketplace",
+    //   dates: "Working",
+    //   active: true,
+    //   description:
+    //       "A classified marketplace specifically designed for college students. Buy and sell used items like lab coats, calculators, notes, and more within your college. Freshers can browse and buy, while only verified students with a @college.edu email can post items for sale.At night, the app transforms into a Night Market where students can buy and sell items within their hostels.",
+    //   technologies: [
+    //     "ReactJs",
+    //     "Python",
+    //     "Flask",
+    //     "PostGreSQL",
+    //     "Tailwind",
+    //     "FireBase",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://github.com/Aayush-Bindal/CampusMarketplace",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/CampusMarketplace.png",
+    //   video:
+    //     "",
+    // },
         {
       title: "CS50 Finance",
       href: "https://github.com/Aayush-Bindal/CS50-finance",
@@ -250,6 +308,42 @@ export const DATA = {
     },
   ],
   hackathons: [
+    {
+      title: "GKDC Season 13",
+      dates: "Feb 2026",
+      location: "Coimbatore, India",
+      description:
+        "2nd Place Overall & 1st in Innovation. Vice Champions nationally for advanced telemetry and electronic integration in electric go-kart competition. Secured additional 2nd place finishes in Design Evaluation and Endurance Race.",
+      image: "/GKDC.png",
+      links: [],
+    },
+    {
+      title: "SabkaAI (Thapar x University of Queensland)",
+      dates: "Jan 2026",
+      location: "Patiala, India",
+      description:
+        "Runner Up (2nd Place). Built JanMitra, a dialect-aware AI assistant for rural citizen accessibility.",
+      image: "/UQL.svg",
+      links: [],
+    },
+    {
+      title: "Hack4Delhi",
+      dates: "Jan 2026",
+      location: "Delhi, India",
+      description:
+        "Top 50 Finalist. Ranked among the top 50 teams out of 2000+ participants for scalable urban infrastructure simulations.",
+      image: "/Hack4.png",
+      links: [],
+    },
+    {
+      title: "IEEE BIOS Hackathon SafeMode Track",
+      dates: "Nov 2025",
+      location: "Patiala, India",
+      description:
+        "Winner. Built ATLAS, an AI scrapbook platform recognized for high-performance UI rendering.",
+      image: "/IEEE.png",
+      links: [],
+    },
     {
       title: "HackSpire",
       dates: "April 2025",
