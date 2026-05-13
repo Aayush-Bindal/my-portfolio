@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   description: DATA.description,
   keywords: [
     "Aayush Bindal",
+    "Aayush bindal portfolio",
     "Ayush Bindal",
     "Bindal",
     "Ayush",
