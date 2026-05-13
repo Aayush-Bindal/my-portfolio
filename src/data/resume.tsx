@@ -66,14 +66,14 @@ export const DATA = {
         url: "https://x.com/Aayush_00_",
         icon: Icons.x,
 
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:aayushbindal01@gmail.com",
         icon: Icons.email,
 
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -177,11 +177,6 @@ export const DATA = {
           href: "https://sim-onoe.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/Aayush-Bindal/SimONOE",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
       image: "/simonoe.png",
       video: "",
@@ -253,7 +248,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/Aayush-Bindal/TimeTable",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
@@ -302,7 +297,7 @@ export const DATA = {
         {
           type: "Source",
           href: "https://github.com/Aayush-Bindal/CS50-finance",
-          icon: <Icons.globe className="size-3" />,
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/images.png",

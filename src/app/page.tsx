@@ -111,6 +111,19 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <section id="github-snake">
+        <BlurFade delay={BLUR_FADE_DELAY * 10}>
+          <div className="flex w-full justify-center py-4 mt-8">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcSet="https://raw.githubusercontent.com/Aayush-Bindal/Aayush-Bindal/output/github-snake-dark.svg" />
+              <source media="(prefers-color-scheme: light)" srcSet="https://raw.githubusercontent.com/Aayush-Bindal/Aayush-Bindal/output/github-snake.svg" />
+              <img alt="github contribution snake" src="https://raw.githubusercontent.com/Aayush-Bindal/Aayush-Bindal/output/github-snake.svg" className="w-full max-w-[800px] h-auto object-contain rounded-lg shadow-sm" />
+            </picture>
+          </div>
+        </BlurFade>
+      </section>
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
