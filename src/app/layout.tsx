@@ -62,7 +62,14 @@ export const metadata: Metadata = {
     creator: "@Aayush_00_",
   },
   icons: {
-    icon: "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAP//AP///wAk2doABP//ABbz8gAICAgAHt3dABbx8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERAAAAABERABERAAABEQAAABEQAAEQERERARAAEREREREREQARAAQRQAARABYABoVgAGEAEAIANwIAAQBAAAAAAAAEAAAAAAAAAAAAAREREREREAABEREREREQAAAREREREQAAAAAREREAAAAAAAAAAAAAD4HwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAA",
+    icon: [
+      {
+        url: "https://img.icons8.com/?size=64&id=6705&format=png&color=000000",
+        type: "image/png",
+      },
+    ],
+    shortcut: ["https://img.icons8.com/?size=64&id=6705&format=png&color=000000"],
+    apple: ["https://img.icons8.com/?size=180&id=6705&format=png&color=000000"],
   },
   verification: {
     google: "",
