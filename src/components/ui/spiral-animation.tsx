@@ -1,7 +1,6 @@
 'use client'
 
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
-import { gsap } from 'gsap'
 
 class Vector2D {
   constructor(public x: number, public y: number) {}
@@ -16,7 +15,12 @@ class Vector3D {
 }
 
 class AnimationController {
-  private timeline: gsap.core.Timeline
+  private rafId: number | null = null
+  private animationStartTime = 0
+  private isExiting = false
+  private exitStartTime = 0
+  private exitStartProgress = 0
+  private exitOnComplete: (() => void) | null = null
   private time = 0
   private size: number
   private stars: Star[] = []
@@ -29,15 +33,16 @@ class AnimationController {
   private readonly viewZoom = 100
   private readonly numberOfStars: number
   private readonly trailLength = 80
+  private readonly loopDurationMs = 15000
+  private readonly exitDurationMs = 900
 
   constructor(ctx: CanvasRenderingContext2D, size: number, numberOfStars: number) {
     this.ctx = ctx
     this.size = size
     this.numberOfStars = numberOfStars
-    this.timeline = gsap.timeline({ repeat: -1 })
 
     this.setupRandomGenerator()
-    this.setupTimeline()
+    this.startAnimation()
   }
 
   private setupRandomGenerator() {
@@ -61,14 +66,43 @@ class AnimationController {
     }
   }
 
-  private setupTimeline() {
-    this.timeline.to(this, {
-      time: 1,
-      duration: 15,
-      repeat: -1,
-      ease: 'none',
-      onUpdate: () => this.render(),
-    })
+  private startAnimation() {
+    this.animationStartTime = performance.now()
+    this.cancelAnimationFrame()
+    this.rafId = requestAnimationFrame(this.tick)
+  }
+
+  private cancelAnimationFrame() {
+    if (this.rafId !== null) {
+      window.cancelAnimationFrame(this.rafId)
+      this.rafId = null
+    }
+  }
+
+  private tick = (now: number) => {
+    if (this.isExiting) {
+      const elapsed = now - this.exitStartTime
+      const progress = this.constrain(elapsed / this.exitDurationMs, 0, 1)
+      const eased = Math.pow(progress, 3)
+      this.time = this.lerp(this.exitStartProgress, 1, eased)
+      this.render()
+
+      if (progress >= 1) {
+        const onComplete = this.exitOnComplete
+        this.exitOnComplete = null
+        this.cancelAnimationFrame()
+        onComplete?.()
+        return
+      }
+
+      this.rafId = requestAnimationFrame(this.tick)
+      return
+    }
+
+    const elapsed = now - this.animationStartTime
+    this.time = (elapsed % this.loopDurationMs) / this.loopDurationMs
+    this.render()
+    this.rafId = requestAnimationFrame(this.tick)
   }
 
   public ease(p: number, g: number): number {
@@ -190,18 +224,19 @@ class AnimationController {
   }
 
   public destroy() {
-    this.timeline.kill()
+    this.cancelAnimationFrame()
+    this.exitOnComplete = null
   }
 
   public playExit(onComplete: () => void) {
-    this.timeline.pause()
-    gsap.to(this, {
-      time: 1,
-      duration: 0.9,
-      ease: 'power3.in',
-      onUpdate: () => this.render(),
-      onComplete,
-    })
+    if (this.isExiting) return
+    this.isExiting = true
+    this.exitStartTime = performance.now()
+    this.exitStartProgress = this.time
+    this.exitOnComplete = onComplete
+
+    this.cancelAnimationFrame()
+    this.rafId = requestAnimationFrame(this.tick)
   }
 
   public getCameraZ() {
