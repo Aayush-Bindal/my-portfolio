@@ -27,12 +27,13 @@ class AnimationController {
   private readonly cameraTravelDistance = 3400
   private readonly startDotYOffset = 28
   private readonly viewZoom = 100
-  private readonly numberOfStars = 5000
+  private readonly numberOfStars: number
   private readonly trailLength = 80
 
-  constructor(ctx: CanvasRenderingContext2D, size: number) {
+  constructor(ctx: CanvasRenderingContext2D, size: number, numberOfStars: number) {
     this.ctx = ctx
     this.size = size
+    this.numberOfStars = numberOfStars
     this.timeline = gsap.timeline({ repeat: -1 })
 
     this.setupRandomGenerator()
@@ -342,8 +343,11 @@ export const SpiralAnimation = forwardRef<SpiralAnimationHandle>(function Spiral
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    const dpr = window.devicePixelRatio || 1
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
     const size = Math.max(dimensions.width, dimensions.height)
+    const isSmallScreen = dimensions.width < 768
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const starCount = prefersReducedMotion ? 700 : isSmallScreen ? 1400 : 2600
 
     canvas.width = size * dpr
     canvas.height = size * dpr
@@ -353,7 +357,7 @@ export const SpiralAnimation = forwardRef<SpiralAnimationHandle>(function Spiral
     ctx.setTransform(1, 0, 0, 1, 0, 0)
     ctx.scale(dpr, dpr)
 
-    animationRef.current = new AnimationController(ctx, size)
+    animationRef.current = new AnimationController(ctx, size, starCount)
 
     return () => {
       animationRef.current?.destroy()

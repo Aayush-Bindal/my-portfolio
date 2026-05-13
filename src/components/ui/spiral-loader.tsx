@@ -6,16 +6,17 @@ import { useRef } from 'react'
 
 type SpiralLoaderProps = {
   onEnter: () => void
+  isReady: boolean
 }
 
-export function SpiralLoader({ onEnter }: SpiralLoaderProps) {
+export function SpiralLoader({ onEnter, isReady }: SpiralLoaderProps) {
   const [startVisible, setStartVisible] = useState(false)
   const [isExiting, setIsExiting] = useState(false)
   const animationRef = useRef<SpiralAnimationHandle>(null)
   const completedRef = useRef(false)
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setStartVisible(true), 2000)
+    const timer = window.setTimeout(() => setStartVisible(true), 1200)
     return () => window.clearTimeout(timer)
   }, [])
 
@@ -44,13 +45,19 @@ export function SpiralLoader({ onEnter }: SpiralLoaderProps) {
           startVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
         }`}
       >
-        <button
-          onClick={handleEnter}
-          disabled={isExiting}
-          className="animate-pulse text-2xl font-extralight uppercase tracking-[0.2em] text-white transition-all duration-700 hover:tracking-[0.3em]"
-        >
-          {isExiting ? 'Entering...' : 'Enter'}
-        </button>
+        {isReady ? (
+          <button
+            onClick={handleEnter}
+            disabled={isExiting}
+            className="animate-pulse text-2xl font-extralight uppercase tracking-[0.2em] text-white transition-all duration-700 hover:tracking-[0.3em]"
+          >
+            {isExiting ? 'Entering...' : 'Enter'}
+          </button>
+        ) : (
+          <div className="text-sm font-light uppercase tracking-[0.35em] text-white/70">
+            Loading...
+          </div>
+        )}
       </div>
     </div>
   )

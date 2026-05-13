@@ -121,7 +121,7 @@ interface Particle {
 
 export const FluidParticlesBackground = ({
   children,
-  particleCount = 2000,
+  particleCount = 1200,
   noiseIntensity = 0.003,
   particleSize = { min: 0.5, max: 2 },
   className,
@@ -136,16 +136,34 @@ export const FluidParticlesBackground = ({
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
+    let viewportWidth = window.innerWidth;
+    let viewportHeight = window.innerHeight;
+
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      viewportWidth = window.innerWidth;
+      viewportHeight = window.innerHeight;
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = Math.floor(viewportWidth * dpr);
+      canvas.height = Math.floor(viewportHeight * dpr);
+      canvas.style.width = `${viewportWidth}px`;
+      canvas.style.height = `${viewportHeight}px`;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
     };
 
     resizeCanvas();
 
-    const particles: Particle[] = Array.from({ length: particleCount }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+    const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const effectiveCount = prefersReducedMotion
+      ? Math.min(120, Math.floor(particleCount * 0.2))
+      : isSmallScreen
+        ? Math.min(400, Math.floor(particleCount * 0.45))
+        : Math.min(900, particleCount);
+
+    const particles: Particle[] = Array.from({ length: effectiveCount }, () => ({
+      x: Math.random() * viewportWidth,
+      y: Math.random() * viewportHeight,
       size:
         Math.random() * (particleSize.max - particleSize.min) +
         particleSize.min,
@@ -155,19 +173,34 @@ export const FluidParticlesBackground = ({
     }));
 
     let rafId = 0;
+    let lastFrameTime = 0;
+    const frameInterval = prefersReducedMotion ? 1000 / 20 : 1000 / 30;
+
     const animate = () => {
+      const now = performance.now();
+      if (now - lastFrameTime < frameInterval) {
+        rafId = requestAnimationFrame(animate);
+        return;
+      }
+      lastFrameTime = now;
+
+      if (document.hidden) {
+        rafId = requestAnimationFrame(animate);
+        return;
+      }
+
       const isDark = document.documentElement.classList.contains("dark");
       const scheme = isDark ? COLOR_SCHEME.dark : COLOR_SCHEME.light;
 
       ctx.fillStyle = scheme.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, viewportWidth, viewportHeight);
 
       for (const particle of particles) {
         particle.life += 1;
         if (particle.life > particle.maxLife) {
           particle.life = 0;
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
+          particle.x = Math.random() * viewportWidth;
+          particle.y = Math.random() * viewportHeight;
         }
 
         const opacity =
@@ -176,7 +209,7 @@ export const FluidParticlesBackground = ({
         const n = noise.simplex3(
           particle.x * noiseIntensity,
           particle.y * noiseIntensity,
-          Date.now() * 0.0001,
+          now * 0.0001,
         );
 
         const angle = n * Math.PI * 4;
@@ -186,10 +219,10 @@ export const FluidParticlesBackground = ({
         particle.x += particle.velocity.x;
         particle.y += particle.velocity.y;
 
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = viewportWidth;
+        if (particle.x > viewportWidth) particle.x = 0;
+        if (particle.y < 0) particle.y = viewportHeight;
+        if (particle.y > viewportHeight) particle.y = 0;
 
         ctx.fillStyle = isDark
           ? `rgba(255, 255, 255, ${opacity})`
