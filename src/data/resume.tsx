@@ -8,9 +8,9 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "a full stack developer and AI/ML enthusiast. Passionate about solving real-world problems and contributing to open-source.",
+    "a pre-final year CS student who ships things people actually use.",
   summary:
-    "I'm a full stack developer and a Computer Engineering student at Thapar University. I specialize in building scalable web and mobile applications using modern technologies like React, Next.js, and Node.js. Recently, I've been deeply exploring Artificial Intelligence and Deep Learning, working with PyTorch and LLMs. I'm passionate about open-source, building real-world tools, and participating in hackathons. Whether it's a deep learning pipeline, a cross-platform mobile app, or a high-traffic web utility, I love building things that make an impact.",
+    "I'm a CS student at Thapar Institute and a builder first. I've shipped a timetable tool used by 7000+ students, an LLM-powered nutrition tracker with 50+ active users, and won multiple hackathons including IEEE BIOS and SabkaAI. Outside of software, I'm a DAQ engineer for our national go-kart team — building real-time vehicle telemetry systems with LoRa RF pipelines and sensor data at 100Hz. Whether it's a React Native app, an LLM pipeline, or embedded hardware — I care about shipping things that work in the real world, not just in a repo.",
   avatarUrl: "/me.png",
   skills: [
     "Python",
