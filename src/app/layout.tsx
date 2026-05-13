@@ -15,12 +15,24 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: DATA.name,
+    default: `${DATA.name} | Portfolio`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  keywords: [
+    "Aayush Bindal",
+    "Portfolio",
+    "Full Stack Developer",
+    "AI/ML Enthusiast",
+    "Software Engineer",
+    "Next.js",
+    "React",
+    "TypeScript",
+  ],
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
   openGraph: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Portfolio`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -39,8 +51,13 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: `${DATA.name} | Portfolio`,
+    description: DATA.description,
     card: "summary_large_image",
+    creator: "@Aayush_00_",
+  },
+  icons: {
+    icon: "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAP//AP///wAk2doABP//ABbz8gAICAgAHt3dABbx8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERAAAAABERABERAAABEQAAABEQAAEQERERARAAEREREREREQARAAQRQAARABYABoVgAGEAEAIANwIAAQBAAAAAAAAEAAAAAAAAAAAAAREREREREAABEREREREQAAAREREREQAAAAAREREAAAAAAAAAAAAAD4HwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAA",
   },
   verification: {
     google: "",
