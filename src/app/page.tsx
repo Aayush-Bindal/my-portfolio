@@ -12,6 +12,7 @@ import { SplineScene } from "@/components/ui/splite";
 import { TextScramble } from "@/components/ui/text-scramble";
 import { Typewriter } from "@/components/ui/typewriter";
 import { DATA } from "@/data/resume";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
@@ -66,12 +67,24 @@ function PortfolioContent({ entered }: { entered: boolean }) {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <div className="h-44 w-44 overflow-hidden bg-transparent sm:h-56 sm:w-56">
-                <SplineScene
-                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                  className="h-full w-full"
-                />
-              </div>
+              <>
+                <div className="hidden h-44 w-44 overflow-hidden bg-transparent sm:block sm:h-56 sm:w-56">
+                  <SplineScene
+                    scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="relative h-24 w-24 overflow-hidden rounded-2xl border border-border/60 sm:hidden">
+                  <Image
+                    src={DATA.avatarUrl}
+                    alt={DATA.name}
+                    fill
+                    sizes="96px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </>
             </BlurFade>
           </div>
         </div>
