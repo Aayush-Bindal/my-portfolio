@@ -9,26 +9,56 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { FluidParticlesBackground } from "@/components/ui/fluid-particles-background";
 import { SpiralLoader } from "@/components/ui/spiral-loader";
+import { TextScramble } from "@/components/ui/text-scramble";
+import { Typewriter } from "@/components/ui/typewriter";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
-function PortfolioContent() {
+function PortfolioContent({ entered }: { entered: boolean }) {
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const projectsTitleRef = useRef<HTMLHeadingElement>(null);
+  const hackathonsTitleRef = useRef<HTMLHeadingElement>(null);
+  const contactTitleRef = useRef<HTMLHeadingElement>(null);
+  const [nameInView, setNameInView] = useState(false);
+  const [projectsTitleInView, setProjectsTitleInView] = useState(false);
+  const [hackathonsTitleInView, setHackathonsTitleInView] = useState(false);
+  const [contactTitleInView, setContactTitleInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.target === nameRef.current) setNameInView(entry.isIntersecting);
+      if (entry.target === projectsTitleRef.current) setProjectsTitleInView(entry.isIntersecting);
+      if (entry.target === hackathonsTitleRef.current) setHackathonsTitleInView(entry.isIntersecting);
+      if (entry.target === contactTitleRef.current) setContactTitleInView(entry.isIntersecting);
+    }, { threshold: 0.6 });
+
+    if (nameRef.current) observer.observe(nameRef.current);
+    if (projectsTitleRef.current) observer.observe(projectsTitleRef.current);
+    if (hackathonsTitleRef.current) observer.observe(hackathonsTitleRef.current);
+    if (contactTitleRef.current) observer.observe(contactTitleRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-screen-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} `}
-              />
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <h1
+                  ref={nameRef}
+                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                >
+                  <span className="mr-3">Hi, I&apos;m</span>
+                  <Typewriter words={["ayu", "Aayush"]} speed={70} trigger={entered && nameInView} />
+                </h1>
+              </BlurFade>
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
@@ -137,9 +167,17 @@ function PortfolioContent() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   My Projects
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
-                </h2>
+                <h1 ref={projectsTitleRef} className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  <TextScramble
+                    as="span"
+                    className="inline-block"
+                    duration={0.75}
+                    speed={0.05}
+                    trigger={entered && projectsTitleInView}
+                  >
+                    Check out my latest work
+                  </TextScramble>
+                </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve worked on a variety of projects, from simple
                   websites to complex web applications. Here are a few of my
@@ -178,9 +216,17 @@ function PortfolioContent() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
-                </h2>
+                <h1 ref={hackathonsTitleRef} className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  <TextScramble
+                    as="span"
+                    className="inline-block"
+                    duration={0.75}
+                    speed={0.05}
+                    trigger={entered && hackathonsTitleInView}
+                  >
+                    I like building things
+                  </TextScramble>
+                </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I&apos;ve Won{" "}4+ hackathons. People from around the
                   country would come together and build incredible things in 2-3
@@ -219,9 +265,17 @@ function PortfolioContent() {
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Contact
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
+              <h1 ref={contactTitleRef} className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <TextScramble
+                  as="span"
+                  className="inline-block"
+                  duration={0.7}
+                  speed={0.05}
+                  trigger={entered && contactTitleInView}
+                >
+                  Get in Touch
+                </TextScramble>
+              </h1>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
@@ -253,7 +307,7 @@ export default function Page() {
         />
       </div>
       <div className="relative z-10">
-        <PortfolioContent />
+        <PortfolioContent entered={entered} />
       </div>
     </>
   );
