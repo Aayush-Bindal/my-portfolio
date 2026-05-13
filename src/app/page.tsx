@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { FluidParticlesBackground } from "@/components/ui/fluid-particles-background";
 import { SpiralLoader } from "@/components/ui/spiral-loader";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -245,7 +246,15 @@ export default function Page() {
   return (
     <>
       {!entered ? <SpiralLoader onEnter={() => setEntered(true)} /> : null}
-      <PortfolioContent />
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <FluidParticlesBackground
+          particleCount={1200}
+          className="h-full w-full bg-transparent"
+        />
+      </div>
+      <div className="relative z-10">
+        <PortfolioContent />
+      </div>
     </>
   );
 }
