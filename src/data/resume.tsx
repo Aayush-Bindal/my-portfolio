@@ -4,11 +4,12 @@ import { HomeIcon, NotebookIcon, FileDown } from "lucide-react";
 export const DATA = {
   name: "Aayush Bindal",
   initials: "AB",
-  url: "https://www.google.com/maps/place/india",
+  url: "https://aayushbindal.me/",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "a pre-final year CS student who ships things people actually use.",
+    "a CS student who ships things people actually use.",
+  metaDescription: "CS Engineering student at Thapar University. Builds full-stack apps, LLM pipelines, and embedded telemetry systems. IEEE BIOS winner. Shipped tools used by 7000+ students.",
   summary:
     "I'm a CS student at Thapar Institute and a builder first. I've shipped a timetable tool used by 7000+ students, an LLM-powered nutrition tracker with 50+ active users, and won multiple hackathons including IEEE BIOS and SabkaAI. Outside of software, I'm a DAQ engineer for our national go-kart team — building real-time vehicle telemetry systems with LoRa RF pipelines and sensor data at 100Hz. Whether it's a React Native app, an LLM pipeline, or embedded hardware — I care about shipping things that work in the real world, not just in a repo.",
   avatarUrl: "/me.png",
