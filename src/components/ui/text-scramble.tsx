@@ -7,6 +7,7 @@ type TextScrambleProps = {
   children: string;
   duration?: number;
   speed?: number;
+  startDelay?: number;
   characterSet?: string;
   as?: React.ElementType;
   className?: string;
@@ -21,6 +22,7 @@ export function TextScramble({
   children,
   duration = 0.8,
   speed = 0.04,
+  startDelay = 0,
   characterSet = defaultChars,
   className,
   as: Component = 'p',
@@ -80,8 +82,14 @@ export function TextScramble({
     if (hasTriggeredRef.current) return;
     hasTriggeredRef.current = true;
 
-    scramble();
-  }, [trigger, scramble]);
+    const timeoutId = window.setTimeout(() => {
+      scramble();
+    }, Math.max(startDelay, 0) * 1000);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [trigger, scramble, startDelay]);
 
   return (
     <MotionComponent className={className} {...props}>

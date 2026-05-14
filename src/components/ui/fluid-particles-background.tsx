@@ -191,6 +191,7 @@ export const FluidParticlesBackground = ({
 
       const isDark = document.documentElement.classList.contains("dark");
       const scheme = isDark ? COLOR_SCHEME.dark : COLOR_SCHEME.light;
+      const particleColorBase = isDark ? "255, 255, 255" : "0, 0, 0";
 
       ctx.fillStyle = scheme.background;
       ctx.fillRect(0, 0, viewportWidth, viewportHeight);
@@ -224,9 +225,7 @@ export const FluidParticlesBackground = ({
         if (particle.y < 0) particle.y = viewportHeight;
         if (particle.y > viewportHeight) particle.y = 0;
 
-        ctx.fillStyle = isDark
-          ? `rgba(255, 255, 255, ${opacity})`
-          : `rgba(0, 0, 0, ${opacity})`;
+        ctx.fillStyle = `rgba(${particleColorBase}, ${opacity})`;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
