@@ -137,7 +137,7 @@ export const DATA = {
   projects: [
     {
       title: "Atlas – AI Digital Memory Scrapbook",
-      href: "https://github.com/Aayush-Bindal/atlas",
+      href: "https://atlas-bios.vercel.app/",
       dates: "Nov 2025",
       active: true,
       description:
@@ -347,9 +347,8 @@ export const DATA = {
       dates: "April 2025",
       location: "",
       description:
-        "Developed a web application with AI model integration as part of a 4-person team at the HackSpire hackathon. The project was built overnight and recognized as one of the top projects at the event.",
-      image:
-        "/Hackspire.webp",
+        "Built an AI-integrated web app overnight with a 4-person team. Recognized as one of the top projects at the event.",
+      image: "/Hackspire.webp",
       links: [
         {
           title: "",
@@ -363,9 +362,8 @@ export const DATA = {
       dates: "April 2025",
       location: "",
       description:
-        "At HackOWASP, I collaborated within a team of five to develop an anonymous product/service review website leveraging blockchain technology. This web3 application aimed to combat fake reviews by ensuring anonymity and data integrity. My contributions included learning and implementing Motoko for smart contract development and integrating sentiment analysis to provide insightful review summaries. This experience provided valuable insights into blockchain development and AI-driven content analysis within a decentralized environment.",
-      image:
-        "/lego.png",
+        "Built an anonymous Web3 product review platform on the ICP blockchain. Implemented Motoko smart contracts and integrated sentiment analysis for review summaries.",
+      image: "/lego.png",
       links: [
         {
           title: "",
@@ -379,9 +377,8 @@ export const DATA = {
       dates: "February 2025",
       location: "",
       description:
-        "At Robothon, my first robotics hackathon, our team built a small robot designed to navigate fire scenarios and assist firefighters. This project marked my first experience using Arduino and various sensors in a hackathon setting. The robot was engineered to autonomously navigate a simulated fire environment, demonstrating a practical application of robotics to aid in emergency response. This experience provided valuable hands-on learning in embedded systems, sensor integration, and robotic design.",
-      image:
-        "/Robothon.jpeg",
+        "Built an autonomous fire-navigation robot using Arduino and custom sensors. First experience with embedded systems and hardware hacking.",
+      image: "/Robothon.jpeg",
       links: [
         {
           title: "",
@@ -395,9 +392,8 @@ export const DATA = {
       dates: "November 2024",
       location: "",
       description:
-        "At Sathack, my first hackathon, I developed a web application designed as a support platform for incoming college students. The core feature was a chatbot capable of answering frequently asked questions about various aspects of college life, including class locations, subjects, societies, and professors. This project marked my initial foray into hackathons, providing a practical application of web development skills to address a common challenge faced by new students, enhancing their onboarding experience.",
-      image:
-        "/sat.jpeg",
+        "First hackathon. Built a college onboarding platform with a FAQ chatbot covering classes, societies, professors and campus logistics.",
+      image: "/sat.jpeg",
       links: [
         {
           title: "",
@@ -411,9 +407,8 @@ export const DATA = {
       dates: "August 2024",
       location: "",
       description:
-        "Participated in first competitive ideathon focused on brand innovation and product development. Collaborated with team to merge two distinct brands and conceptualize an entirely new product offering. Gained experience in creative problem-solving, rapid ideation, market analysis, and presentation skills under time constraints.",
-      image:
-        "/SynergySpark.webp",
+        "First ideathon. Merged two brands and pitched an entirely new product concept under time pressure.",
+      image: "/SynergySpark.webp",
       links: [
         {
           title: "",
