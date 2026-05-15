@@ -1,22 +1,29 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
+import { DockIcon } from "./magicui/dock";
+import { Tooltip, TooltipTrigger, TooltipContent } from "./ui/tooltip";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Button
-      variant="ghost"
-      type="button"
-      size="icon"
-      className="px-2"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-    >
-      <SunIcon className="h-[1.2rem] w-[1.2rem] text-neutral-800 dark:hidden dark:text-neutral-200" />
-      <MoonIcon className="hidden h-[1.2rem] w-[1.2rem] text-neutral-800 dark:block dark:text-neutral-200" />
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="relative block shrink-0"
+        >
+          <DockIcon className="hover:bg-accent hover:text-accent-foreground text-foreground transition-colors cursor-pointer">
+            <SunIcon className="size-full text-inherit dark:hidden" />
+            <MoonIcon className="hidden size-full text-inherit dark:block" />
+          </DockIcon>
+        </button>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>Theme</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }
