@@ -18,7 +18,7 @@ export default function Navbar() {
           <Tooltip key={item.href}>
             <TooltipTrigger asChild>
               <Link href={item.href} className="relative block shrink-0">
-                <DockIcon className="hover:bg-accent hover:text-accent-foreground text-foreground transition-colors cursor-pointer">
+                <DockIcon className="hover:bg-accent hover:text-accent-foreground text-foreground/80 transition-colors cursor-pointer">
                   <item.icon className="size-full" />
                 </DockIcon>
               </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
             <Tooltip key={name}>
               <TooltipTrigger asChild>
                 <Link href={social.url} className="relative block shrink-0">
-                  <DockIcon className="hover:bg-accent hover:text-accent-foreground text-foreground transition-colors cursor-pointer">
+                  <DockIcon className="hover:bg-accent hover:text-accent-foreground text-foreground/80 transition-colors cursor-pointer">
                     <social.icon className="size-full" />
                   </DockIcon>
                 </Link>
