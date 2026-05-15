@@ -77,14 +77,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      {
-        url: "https://img.icons8.com/?size=64&id=6705&format=png&color=000000",
-        type: "image/png",
-      },
-    ],
-    shortcut: ["https://img.icons8.com/?size=64&id=6705&format=png&color=000000"],
-    apple: ["https://img.icons8.com/?size=180&id=6705&format=png&color=000000"],
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: ["/favicon.png"],
+    apple: ["/favicon.png"],
   },
 };
 
