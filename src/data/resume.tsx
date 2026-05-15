@@ -153,11 +153,39 @@ export const DATA = {
         {
           type: "Website",
           href: "atlas-bios.vercel.app",
-          icon: <Icons.github className="size-3" />,
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video: "/atlas.mp4",
+    },
+    {
+      title: "NutriAI – AI Nutrition Tracker",
+      href: "https://github.com/Aayush-Bindal/NutriAI",
+      dates: "Feb 2026 - April 2026",
+      active: true,
+      description:
+        "Shipped cross-platform nutrition tracker supporting natural language / image meal logging. Implemented LLM-powered parsing pipeline with automatic fallback reducing meal logging time by 85%. Designed animated calorie rings and architected a fully local data layer with secure API storage.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "Gemini API",
+        "JavaScript"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/NutriAI",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Download",
+          href: "https://github.com/Aayush-Bindal/NutriAI/releases",
+          icon: <Icons.download className="size-3" />,
+        },
+      ],
+      image: "/NutriAI.jpg",
+      video: "",
     },
     {
       title: "SimONOE – ONOE Impact Simulator",
@@ -180,29 +208,6 @@ export const DATA = {
         },
       ],
       image: "/simonoe.png",
-      video: "",
-    },
-    {
-      title: "NutriAI – AI Nutrition Tracker",
-      href: "https://github.com/Aayush-Bindal/NutriAI",
-      dates: "Feb 2026 - April 2026",
-      active: true,
-      description:
-        "Shipped cross-platform nutrition tracker supporting natural language meal logging. Implemented LLM-powered parsing pipeline with automatic fallback reducing meal logging time by 85%. Designed animated calorie rings and architected a fully local data layer with secure API storage.",
-      technologies: [
-        "React Native",
-        "Expo",
-        "Gemini API",
-        "JavaScript"
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Aayush-Bindal/NutriAI",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/NutriAI.jpg",
       video: "",
     },
     // {
