@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description:DATA.metaDescription,
+  verification: {
+    google: '_TEDcFOoS3WTqG3uQfH2_5M0yO4MeZSo75ZSXe2ugYU',
+  },
   keywords: [
     "Aayush Bindal",
     "Aayush Bindal portfolio",
