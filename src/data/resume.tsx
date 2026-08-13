@@ -19,6 +19,7 @@ export const DATA = {
     "TypeScript",
     "C++",
     "C",
+    "Java",
     "React",
     "Next.js",
     "React Native",
