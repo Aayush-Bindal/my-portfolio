@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, FileDown } from "lucide-react";
+import { HomeIcon, FileDown } from "lucide-react";
 
 export const DATA = {
   name: "Aayush Bindal",
@@ -9,9 +9,9 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/india",
   description:
     "a CS student who ships things people actually use.",
-  metaDescription: "CS Engineering student at Thapar University. Builds full-stack apps, LLM pipelines, and embedded telemetry systems. IEEE BIOS winner. Shipped tools used by 7000+ students.",
+  metaDescription: "CS Engineering student at Thapar University building full-stack apps, voice AI agents, edge AI robotics, and embedded telemetry systems. Qualcomm Snapdragon Multiverse AI winner. Shipped tools used by 7000+ students.",
   summary:
-    "I'm a CS student at Thapar Institute and a builder first. I've shipped a timetable tool used by 7000+ students, an LLM-powered nutrition tracker with 50+ active users, and won multiple hackathons including IEEE BIOS and SabkaAI. Outside of software, I'm a DAQ engineer for our national go-kart team — building real-time vehicle telemetry systems with LoRa RF pipelines and sensor data at 100Hz. Whether it's a React Native app, an LLM pipeline, or embedded hardware — I care about shipping things that work in the real world, not just in a repo.",
+    "I'm a CS student at Thapar Institute and a builder first. I've shipped a timetable tool used by 7000+ students, a nutrition tracker serving 50+ active users, JanMitra for rural citizen access, and DragVerse, an Edge AI robotics platform that won the Qualcomm Snapdragon Multiverse AI Hackathon. Outside of software, I'm a DAQ engineer for our national go-kart team, building real-time vehicle telemetry with Simulink/C++, LoRa RF pipelines, and 100Hz sensor data. Whether it's a React Native app, a voice AI agent, or embedded hardware, I care about shipping things that work in the real world, not just in a repo.",
   avatarUrl: "/me.png",
   skills: [
     "Python",
@@ -20,9 +20,11 @@ export const DATA = {
     "C++",
     "C",
     "Java",
+    "R",
     "React",
     "Next.js",
     "React Native",
+    "Expo",
     "Tailwind CSS",
     "Node.js",
     "Express.js",
@@ -30,16 +32,35 @@ export const DATA = {
     "Flask",
     "PostgreSQL",
     "MongoDB",
+    "SQLite",
     "Redis",
+    "WebSockets",
     "PyTorch",
     "NumPy",
     "Pandas",
     "Scikit-learn",
+    "Matplotlib",
     "OpenCV",
+    "MATLAB",
+    "Simulink",
+    "Embedded Systems",
+    "Teensy/ESP32",
+    "Arduino",
+    "IoT",
+    "LiveKit",
+    "WebRTC",
+    "Sarvam AI",
+    "RAG",
+    "Unity",
+    "Gaussian Splatting",
+    "Reinforcement Learning",
+    "Qualcomm AI Hub",
     "Docker",
+    "Linux",
     "Git",
     "AWS",
-    "GCP"
+    "GCP",
+    "CI/CD"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -91,11 +112,11 @@ export const DATA = {
       start: "Nov 2024",
       end: "Present",
       description:
-        "Engineered multi-layer PCBs for sensor signal conditioning and automotive-grade noise reduction. Developed digital twin and data acquisition system using Simulink and C++ monitoring 10+ parameters at 100Hz. Integrated Python telemetry dashboard with LoRa RF pipeline reducing latency by 35% enabling sub-10ms performance updates.",
+        "Led DAQ integration for GKDC Season 13, validating vehicle electronics and telemetry systems. Programmed a digital twin and DAQ framework using Simulink and C++ (Teensy/ESP32) to monitor 10+ critical parameters at 100Hz. Designed multi-layer PCBs for sensor signal conditioning and automotive-grade noise reduction. Orchestrated a Python telemetry dashboard with a LoRa RF pipeline, reducing data latency by 35% and enabling sub-10ms performance updates.",
     },
     {
       company: "Enactus Thapar",
-      href: "https://www.linkedin.com/company/enactus-tiet/posts/?feedView=all",
+      href: "https://www.enactustiet.in/",
       badges: [],
       location: "Patiala, India",
       title: "Head of Research & Development",
@@ -103,7 +124,7 @@ export const DATA = {
       start: "Sept 2024",
       end: "Present",
       description:
-        "Built and deployed the organization's official web presence using React.js and SEO, improving digital traffic by 40%. Leading R&D for Project Aarohan converting PET bottle waste into high-quality 3D printer filament achieving 95% prototype diameter consistency.",
+        "Spearheaded R&D for Project Aarohan, converting PET bottle waste into premium 3D printer filament and achieving a 95% prototype diameter consistency rate. Architected and deployed the organization's official web platform using React.js and SEO, boosting digital traffic by over 40%.",
     },
     {
       company: "GSsoc",
@@ -122,10 +143,10 @@ export const DATA = {
     {
       school: "Thapar Institute of Engineering and Technology",
       href: "https://www.thapar.edu/",
-      degree: "BE, Computer Engineering (CGPA: 8.88/10)",
+      degree: "BE, Computer Engineering (CGPA: 8.66/10)",
       logoUrl: "/Tiet.png",
-      start: "2024",
-      end: "2028",
+      start: "Aug 2024",
+      end: "Jun 2028 (Expected)",
     },
     {
       school: "Alwar Public School",
@@ -137,6 +158,58 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "DragVerse - Edge AI Robotics Platform",
+      href: "https://drag-verse-beta.vercel.app/",
+      dates: "Jul 2026",
+      active: true,
+      description:
+        "Built an edge AI robotics platform that captures real-world environments with Gaussian Splatting and homography to generate digital twins. Trained a reinforcement learning navigation model over 50+ iterations, used Qualcomm AI Hub for Snapdragon NPU on-device inference, and deployed Sim2Real Unity simulations to Arduino Uno Q hardware for offline autonomous navigation.",
+      technologies: [
+        "Unity",
+        "Gaussian Splatting",
+        "Reinforcement Learning",
+        "Qualcomm AI Hub",
+        "Arduino"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://drag-verse-beta.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/adt-kmr/DragVerse",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "JanMitra - Multilingual Voice AI Agent",
+      href: "https://janmitra-ai.vercel.app/",
+      dates: "Jan 2026",
+      active: true,
+      description:
+        "Built a voice-driven AI agent helping rural citizens access financial literacy, government schemes, and grievance services through natural conversation. Integrated LiveKit, Sarvam AI, automated dialect detection, contextual RAG, semantic search, verified government APIs, and a low-bandwidth architecture designed for telephony networks.",
+      technologies: [
+        "LiveKit",
+        "Sarvam AI",
+        "RAG",
+        "WebRTC"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://janmitra-ai.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
     {
       title: "Atlas – AI Digital Memory Scrapbook",
       href: "https://atlas-bios.vercel.app/",
@@ -153,7 +226,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "atlas-bios.vercel.app",
+          href: "https://atlas-bios.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -166,11 +239,12 @@ export const DATA = {
       dates: "Feb 2026 - April 2026",
       active: true,
       description:
-        "Shipped cross-platform nutrition tracker supporting natural language / image meal logging. Implemented LLM-powered parsing pipeline with automatic fallback reducing meal logging time by 85%. Designed animated calorie rings and architected a fully local data layer with secure API storage.",
+        "Shipped a cross-platform nutrition tracker serving 50+ active users with natural language and camera-based meal logging. Integrated a multimodal LLM pipeline with automatic fallback, reducing manual logging time by 85%, and built a local-first SQLite data layer with encrypted JSON backups for user privacy.",
       technologies: [
         "React Native",
         "Expo",
         "Gemini API",
+        "SQLite",
         "JavaScript"
       ],
       links: [
@@ -181,7 +255,7 @@ export const DATA = {
         },
         {
           type: "Download",
-          href: "https://github.com/Aayush-Bindal/NutriAI/releases",
+          href: "https://nutriai-pwa.vercel.app/",
           icon: <Icons.download className="size-3" />,
         },
       ],
@@ -190,7 +264,7 @@ export const DATA = {
     },
     {
       title: "SimONOE – ONOE Impact Simulator",
-      href: "https://sim-onoe.vercel.app/",
+      href: "https://simonoe.baltej.me/",
       dates: "January 2026",
       active: true,
       description:
@@ -204,7 +278,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://sim-onoe.vercel.app/",
+          href: "https://simonoe.baltej.me/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -314,40 +388,79 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "Qualcomm Snapdragon Multiverse AI Hackathon",
+      dates: "Jul 2026",
+      location: "India",
+      description:
+        "Winner (1st Place). Led Team GhostMap to first place overall after progressing from thousands of nationwide entries to the Top 8 Grand Finale. Built DragVerse, an Edge AI digital twin and RL navigation system.",
+      image: "/qualcom.jpg",
+      links: [
+        {
+          title: "Website",
+          icon: <Icons.globe className="size-3" />,
+          href: "https://drag-verse-beta.vercel.app/",
+        },
+      ],
+    },
+    {
       title: "GKDC Season 13",
       dates: "Feb 2026",
       location: "Coimbatore, India",
       description:
         "2nd Place Overall & 1st in Innovation. Vice Champions nationally for advanced telemetry and electronic integration in electric go-kart competition. Secured additional 2nd place finishes in Design Evaluation and Endurance Race.",
       image: "/GKDC.png",
-      links: [],
+      links: [
+        {
+          title: "Repository",
+          icon: <Icons.github className="size-3" />,
+          href: "https://github.com/adishwarr/Team-OORJA-DAQ-Electronics/",
+        },
+      ],
     },
     {
       title: "SabkaAI (Thapar x University of Queensland)",
       dates: "Jan 2026",
       location: "Patiala, India",
       description:
-        "Runner Up (2nd Place). Built JanMitra, a dialect-aware AI assistant for rural citizen accessibility.",
+        "Runner Up (2nd Place). Built JanMitra, a dialect-aware AI voice companion assisting rural citizens with financial literacy.",
       image: "/UQL.svg",
-      links: [],
+      links: [
+        {
+          title: "Deployment",
+          icon: <Icons.globe className="size-3" />,
+          href: "https://janmitra-ai.vercel.app/",
+        },
+      ],
     },
     {
       title: "Hack4Delhi",
       dates: "Jan 2026",
       location: "Delhi, India",
       description:
-        "Top 50 Finalist. Ranked among the top 50 teams out of 2000+ participants for scalable urban infrastructure simulations.",
+        "Top 50 Finalist. Ranked among the top 50 teams out of 2000+ competitors for engineering SimONOE, a scalable urban infrastructure simulation dashboard.",
       image: "/Hack4.png",
-      links: [],
+      links: [
+        {
+          title: "Website",
+          icon: <Icons.globe className="size-3" />,
+          href: "https://simonoe.baltej.me/",
+        },
+      ],
     },
     {
       title: "IEEE BIOS Hackathon SafeMode Track",
       dates: "Nov 2025",
       location: "Patiala, India",
       description:
-        "Winner. Built ATLAS, an AI scrapbook platform recognized for high-performance UI rendering.",
+        "Winner (1st Place). Built ATLAS, a stateless AI scrapbook platform using Claude and LLM orchestration.",
       image: "/IEEE.png",
-      links: [],
+      links: [
+        {
+          title: "Demo",
+          icon: <Icons.globe className="size-3" />,
+          href: "https://atlas-bios.vercel.app/",
+        },
+      ],
     },
     {
       title: "HackSpire",
@@ -358,7 +471,7 @@ export const DATA = {
       image: "/Hackspire.webp",
       links: [
         {
-          title: "",
+          title: "Website",
           icon: <Icons.globe className="size-3" />,
           href: "https://www.hackspire.in/",
         },
@@ -373,7 +486,7 @@ export const DATA = {
       image: "/lego.png",
       links: [
         {
-          title: "",
+          title: "Website",
           icon: <Icons.globe className="size-3" />,
           href: "https://hack.owasptiet.com/",
         },
@@ -386,13 +499,7 @@ export const DATA = {
       description:
         "Built an autonomous fire-navigation robot using Arduino and custom sensors. First experience with embedded systems and hardware hacking.",
       image: "/Robothon.jpeg",
-      links: [
-        {
-          title: "",
-          icon: null,
-          href: "",
-        },
-      ],
+      links: [],
     },
     {
       title: "SatHack",
@@ -401,13 +508,7 @@ export const DATA = {
       description:
         "First hackathon. Built a college onboarding platform with a FAQ chatbot covering classes, societies, professors and campus logistics.",
       image: "/sat.jpeg",
-      links: [
-        {
-          title: "",
-          icon: null,
-          href: "",
-        },
-      ],
+      links: [],
     },
     {
       title: "SynergySpark",
@@ -416,13 +517,7 @@ export const DATA = {
       description:
         "First ideathon. Merged two brands and pitched an entirely new product concept under time pressure.",
       image: "/SynergySpark.webp",
-      links: [
-        {
-          title: "",
-          icon: null,
-          href: "",
-        },
-      ],
+      links: [],
     },
   ],
 } as const;
