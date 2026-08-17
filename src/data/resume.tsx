@@ -103,18 +103,6 @@ export const DATA = {
 
   work: [
     {
-      company: "Team Oorja (GKDC)",
-      href: "https://www.linkedin.com/company/team-oorja/posts/?feedView=all",
-      badges: [],
-      location: "Patiala, India",
-      title: "DAQ Department Engineer",
-      logoUrl: "/team_oorja_logo.jpg",
-      start: "Nov 2024",
-      end: "Present",
-      description:
-        "Led DAQ integration for GKDC Season 13, validating vehicle electronics and telemetry systems. Programmed a digital twin and DAQ framework using Simulink and C++ (Teensy/ESP32) to monitor 10+ critical parameters at 100Hz. Designed multi-layer PCBs for sensor signal conditioning and automotive-grade noise reduction. Orchestrated a Python telemetry dashboard with a LoRa RF pipeline, reducing data latency by 35% and enabling sub-10ms performance updates.",
-    },
-    {
       company: "Enactus Thapar",
       href: "https://www.enactustiet.in/",
       badges: [],
@@ -124,7 +112,19 @@ export const DATA = {
       start: "Sept 2024",
       end: "Present",
       description:
-        "Spearheaded R&D for Project Aarohan, converting PET bottle waste into premium 3D printer filament and achieving a 95% prototype diameter consistency rate. Architected and deployed the organization's official web platform using React.js and SEO, boosting digital traffic by over 40%.",
+      "Spearheaded R&D for Project Aarohan, converting PET bottle waste into premium 3D printer filament and achieving a 95% prototype diameter consistency rate. Architected and deployed the organization's official web platform using React.js and SEO, boosting digital traffic by over 40%.",
+    },
+    {
+      company: "Team Oorja (GKDC)",
+      href: "https://www.linkedin.com/company/team-oorja/posts/?feedView=all",
+      badges: [],
+      location: "Patiala, India",
+      title: "DAQ Department Engineer",
+      logoUrl: "/team_oorja_logo.jpg",
+      start: "Nov 2024",
+      end: "April 2026",
+      description:
+        "Led DAQ integration for GKDC Season 13, validating vehicle electronics and telemetry systems. Programmed a digital twin and DAQ framework using Simulink and C++ (Teensy/ESP32) to monitor 10+ critical parameters at 100Hz. Designed multi-layer PCBs for sensor signal conditioning and automotive-grade noise reduction. Orchestrated a Python telemetry dashboard with a LoRa RF pipeline, reducing data latency by 35% and enabling sub-10ms performance updates.",
     },
     {
       company: "GSsoc",
@@ -188,29 +188,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "JanMitra - Multilingual Voice AI Agent",
-      href: "https://janmitra-ai.vercel.app/",
-      dates: "Jan 2026",
-      active: true,
-      description:
-        "Built a voice-driven AI agent helping rural citizens access financial literacy, government schemes, and grievance services through natural conversation. Integrated LiveKit, Sarvam AI, automated dialect detection, contextual RAG, semantic search, verified government APIs, and a low-bandwidth architecture designed for telephony networks.",
-      technologies: [
-        "LiveKit",
-        "Sarvam AI",
-        "RAG",
-        "WebRTC"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://janmitra-ai.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-    {
       title: "Atlas – AI Digital Memory Scrapbook",
       href: "https://atlas-bios.vercel.app/",
       dates: "Nov 2025",
@@ -232,6 +209,34 @@ export const DATA = {
       ],
       image: "",
       video: "/atlas.mp4",
+    },
+    {
+      title: "JanMitra - Multilingual Voice AI Agent",
+      href: "https://janmitra-ai.vercel.app/",
+      dates: "Jan 2026",
+      active: true,
+      description:
+        "Built a voice-driven AI agent helping rural citizens access financial literacy, government schemes, and grievance services through natural conversation. Integrated LiveKit, Sarvam AI, automated dialect detection, contextual RAG, semantic search, verified government APIs, and a low-bandwidth architecture designed for telephony networks.",
+      technologies: [
+        "LiveKit",
+        "Sarvam AI",
+        "RAG",
+        "WebRTC"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://janmitra-ai.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Aayush-Bindal/Janmitra",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/JanMitra.png",
+      video: "",
     },
     {
       title: "NutriAI – AI Nutrition Tracker",
