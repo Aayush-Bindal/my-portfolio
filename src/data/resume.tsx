@@ -12,7 +12,7 @@ export const DATA = {
   metaDescription: "CS Engineering student at Thapar University building full-stack apps, voice AI agents, edge AI robotics, and embedded telemetry systems. Qualcomm Snapdragon Multiverse AI winner. Shipped tools used by 7000+ students.",
   summary:
     "I'm a CS student at Thapar Institute and a builder first. I've shipped a timetable tool used by 7000+ students, a nutrition tracker serving 50+ active users, JanMitra for rural citizen access, and DragVerse, an Edge AI robotics platform that won the Qualcomm Snapdragon Multiverse AI Hackathon. Outside of software, I'm a DAQ engineer for our national go-kart team, building real-time vehicle telemetry with Simulink/C++, LoRa RF pipelines, and 100Hz sensor data. Whether it's a React Native app, a voice AI agent, or embedded hardware, I care about shipping things that work in the real world, not just in a repo.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/images/profile/me.png",
   skills: [
     "Python",
     "JavaScript",
@@ -64,7 +64,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/RESUME.pdf", icon: FileDown, label: "Resume" },
+    { href: "/documents/RESUME.pdf", icon: FileDown, label: "Resume" },
   ],
   contact: {
     email: "aayushbindal01@gmail.com",
@@ -108,7 +108,7 @@ export const DATA = {
       badges: [],
       location: "Patiala, India",
       title: "Head of Research & Development",
-      logoUrl: "/enactus.png",
+      logoUrl: "/images/work/enactus.png",
       start: "Sept 2024",
       end: "Present",
       description:
@@ -120,7 +120,7 @@ export const DATA = {
       badges: [],
       location: "Patiala, India",
       title: "DAQ Department Engineer",
-      logoUrl: "/team_oorja_logo.jpg",
+      logoUrl: "/images/work/team_oorja_logo.jpg",
       start: "Nov 2024",
       end: "April 2026",
       description:
@@ -132,7 +132,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Contributor & Campus Ambassador",
-      logoUrl: "/girlscriptsoc_logo.jpg",
+      logoUrl: "/images/work/girlscriptsoc_logo.jpg",
       start: "Oct 2024",
       end: "Dec 2025",
       description:
@@ -144,7 +144,7 @@ export const DATA = {
       school: "Thapar Institute of Engineering and Technology",
       href: "https://www.thapar.edu/",
       degree: "BE, Computer Engineering (CGPA: 8.66/10)",
-      logoUrl: "/Tiet.png",
+      logoUrl: "/images/education/Tiet.png",
       start: "Aug 2024",
       end: "Jun 2028 (Expected)",
     },
@@ -152,7 +152,7 @@ export const DATA = {
       school: "Alwar Public School",
       href: "https://www.alwarpublicschool.com/",
       degree: "Schooling",
-      logoUrl: "/alwarpublicschool.jpeg",
+      logoUrl: "/images/education/alwarpublicschool.jpeg",
       start: "",
       end: "",
     },
@@ -185,7 +185,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "",
+      video: "/videos/dragverse.mp4",
     },
     {
       title: "Atlas – AI Digital Memory Scrapbook",
@@ -208,7 +208,7 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "/atlas.mp4",
+      video: "/videos/atlas.mp4",
     },
     {
       title: "JanMitra - Multilingual Voice AI Agent",
@@ -235,7 +235,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/JanMitra.png",
+      image: "/images/projects/JanMitra.png",
       video: "",
     },
     {
@@ -264,7 +264,7 @@ export const DATA = {
           icon: <Icons.download className="size-3" />,
         },
       ],
-      image: "/NutriAI.jpg",
+      image: "/images/projects/NutriAI.jpg",
       video: "",
     },
     {
@@ -287,7 +287,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/simonoe.png",
+      image: "/images/projects/simonoe.png",
       video: "",
     },
     // {
@@ -312,7 +312,7 @@ export const DATA = {
     //       icon: <Icons.globe className="size-3" />,
     //     },
     //   ],
-    //   image: "/EchoVault.png",
+    //   image: "/images/projects/EchoVault.png",
     //   video:
     //     "",
     // },
@@ -339,7 +339,7 @@ export const DATA = {
       ],
       image: "",
       video:
-        "/video.mp4",
+        "/videos/timetable.mp4",
     },
     {
       title: "MalariaNet",
@@ -362,7 +362,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/malaria.png",
+      image: "/images/projects/malaria.png",
       video: "",
     },
         {
@@ -386,7 +386,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/images.png",
+      image: "/images/projects/images.png",
       video:
         "",
     },
@@ -398,7 +398,7 @@ export const DATA = {
       location: "India",
       description:
         "Winner (1st Place). Led Team GhostMap to first place overall after progressing from thousands of nationwide entries to the Top 8 Grand Finale. Built DragVerse, an Edge AI digital twin and RL navigation system.",
-      image: "/qualcom.jpg",
+      image: "/images/hackathons/qualcom.jpg",
       links: [
         {
           title: "Website",
@@ -413,7 +413,7 @@ export const DATA = {
       location: "Coimbatore, India",
       description:
         "2nd Place Overall & 1st in Innovation. Vice Champions nationally for advanced telemetry and electronic integration in electric go-kart competition. Secured additional 2nd place finishes in Design Evaluation and Endurance Race.",
-      image: "/GKDC.png",
+      image: "/images/hackathons/GKDC.png",
       links: [
         {
           title: "Repository",
@@ -428,7 +428,7 @@ export const DATA = {
       location: "Patiala, India",
       description:
         "Runner Up (2nd Place). Built JanMitra, a dialect-aware AI voice companion assisting rural citizens with financial literacy.",
-      image: "/UQL.svg",
+      image: "/images/hackathons/UQL.svg",
       links: [
         {
           title: "Deployment",
@@ -443,7 +443,7 @@ export const DATA = {
       location: "Delhi, India",
       description:
         "Top 50 Finalist. Ranked among the top 50 teams out of 2000+ competitors for engineering SimONOE, a scalable urban infrastructure simulation dashboard.",
-      image: "/Hack4.png",
+      image: "/images/hackathons/Hack4.png",
       links: [
         {
           title: "Website",
@@ -458,7 +458,7 @@ export const DATA = {
       location: "Patiala, India",
       description:
         "Winner (1st Place). Built ATLAS, a stateless AI scrapbook platform using Claude and LLM orchestration.",
-      image: "/IEEE.png",
+      image: "/images/hackathons/IEEE.png",
       links: [
         {
           title: "Demo",
@@ -473,7 +473,7 @@ export const DATA = {
       location: "",
       description:
         "Built an AI-integrated web app overnight with a 4-person team. Recognized as one of the top projects at the event.",
-      image: "/Hackspire.webp",
+      image: "/images/hackathons/Hackspire.webp",
       links: [
         {
           title: "Website",
@@ -488,7 +488,7 @@ export const DATA = {
       location: "",
       description:
         "Built an anonymous Web3 product review platform on the ICP blockchain. Implemented Motoko smart contracts and integrated sentiment analysis for review summaries.",
-      image: "/lego.png",
+      image: "/images/hackathons/lego.png",
       links: [
         {
           title: "Website",
@@ -503,7 +503,7 @@ export const DATA = {
       location: "",
       description:
         "Built an autonomous fire-navigation robot using Arduino and custom sensors. First experience with embedded systems and hardware hacking.",
-      image: "/Robothon.jpeg",
+      image: "/images/hackathons/Robothon.jpeg",
       links: [],
     },
     {
@@ -512,7 +512,7 @@ export const DATA = {
       location: "",
       description:
         "First hackathon. Built a college onboarding platform with a FAQ chatbot covering classes, societies, professors and campus logistics.",
-      image: "/sat.jpeg",
+      image: "/images/hackathons/sat.jpeg",
       links: [],
     },
     {
@@ -521,7 +521,7 @@ export const DATA = {
       location: "",
       description:
         "First ideathon. Merged two brands and pitched an entirely new product concept under time pressure.",
-      image: "/SynergySpark.webp",
+      image: "/images/hackathons/SynergySpark.webp",
       links: [],
     },
   ],
